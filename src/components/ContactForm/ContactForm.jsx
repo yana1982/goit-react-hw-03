@@ -37,15 +37,21 @@ const ContactForm = ({ onAdd }) => {
         <div className={css.field}>
           <label htmlFor={nameFieldId}>Name</label>
           <Field type="text" name="name" id={nameFieldId} />
-          <ErrorMessage name="name" component="span" />
+          <ErrorMessage className={css.ErrorMsg} name="name" component="span" />
         </div>
 
         <div className={css.field}>
           <label htmlFor={numberFieldId}>Number</label>
           <Field type="text" name="number" id={numberFieldId} />
-          <ErrorMessage name="number" component="span" />
+          <ErrorMessage
+            className={css.ErrorMsg}
+            name="number"
+            component="span"
+          />
         </div>
-        <button type="submit">Add contact</button>
+        <button className={css.btn} type="submit">
+          Add contact
+        </button>
       </Form>
     </Formik>
   );
